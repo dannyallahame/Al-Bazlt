@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Woodworks | Al Bazlt Al Ramady</title>
+  <meta name="description" content="A refined custom woodworks service page with video hero, bilingual support, premium styling, and a mobile-friendly layout." />
+  <link rel="canonical" href="https://bazeltgroup.ae/custom-woodworks.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bazeltgroup.ae/custom-woodworks.html">
+  <meta property="og:title" content="Custom Woodworks | Al Bazlt Al Ramady">
+  <meta property="og:description" content="A refined custom woodworks service page with video hero, bilingual support, premium styling, and a mobile-friendly layout." />
+  <meta name="robots" content="index,follow" />
+
+  <style>
+    :root{
+      --bg:#080808;
+      --bg-soft:#0f0f0f;
+      --panel:#121212;
+      --panel-2:rgba(255,255,255,.04);
+      --text:#f5f0e6;
+      --muted:rgba(245,240,230,.72);
+      --gold:#d4af37;
+      --gold-soft:#f1dd9a;
+      --line:rgba(255,255,255,.08);
+      --line-gold:rgba(212,175,55,.22);
+      --shadow:0 20px 50px rgba(0,0,0,.35);
+      --radius-xl:30px;
+      --radius-lg:22px;
+      --radius-md:16px;
+      --container:1240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Tahoma,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,.12), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,.04), transparent 20%),
+        linear-gradient(180deg,#070707 0%,#0c0c0c 55%,#080808 100%);
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size:42px 42px;
+      mask-image:linear-gradient(to bottom, rgba(0,0,0,.5), transparent 92%);
+      opacity:.28;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img,video{max-width:100%;display:block}
+    button,input,textarea,select{font:inherit}
+
+    .container{
+      width:min(var(--container), calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(9,9,9,.84);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 0;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:var(--gold-soft);
+      font-weight:700;
+      min-width:0;
+    }
+
+    .brand-logo{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      object-fit:contain;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      padding:8px;
+      flex-shrink:0;
+    }
+
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.08;
+    }
+
+    .brand-text small{
+      color:var(--muted);
+      font-size:.72rem;
+      font-weight:400;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .nav-dropdown{
+      position:relative;
+    }
+
+    .nav-dropdown-trigger{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:var(--text);
+      transition:.25s ease;
+      cursor:pointer;
+    }
+
+    .nav-dropdown-trigger:hover{
+      border-color:var(--line-gold);
+      color:var(--gold-soft);
+      background:rgba(212,175,55,.08);
+    }
+
+    .nav-dropdown-arrow{
+      font-size:.8rem;
+      transition:transform .25s ease;
+    }
+
+    .nav-dropdown.open .nav-dropdown-arrow{
+      transform:rotate(180deg);
+    }
+
+    .nav-dropdown-menu{
+      position:absolute;
+      top:calc(100% + 10px);
+      left:0;
+      min-width:290px;
+      display:none;
+      flex-direction:column;
+      gap:6px;
+      padding:10px;
+      border-radius:20px;
+      background:rgba(10,10,10,.96);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 20px 50px rgba(0,0,0,.35);
+      z-index:50;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu{
+      display:flex;
+    }
+
+    .nav-dropdown-menu a{
+      display:block;
+      padding:12px 14px;
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid transparent;
+      color:var(--text);
+      transition:.25s ease;
+    }
+
+    .nav-dropdown-menu a:hover{
+      color:var(--gold-soft);
+      background:rgba(212,175,55,.08);
+      border-color:rgba(212,175,55,.2);
+    }
+
+    html[dir="rtl"] .nav-dropdown-menu{
+      left:auto;
+      right:0;
+    }
+
+
+    .nav-links a,
+    .lang-btn{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:var(--text);
+      transition:.25s ease;
+      cursor:pointer;
+    }
+
+    .nav-links a:hover,
+    .lang-btn:hover{
+      border-color:var(--line-gold);
+      color:var(--gold-soft);
+      background:rgba(212,175,55,.08);
+    }
+
+    .lang-btn{
+      background:linear-gradient(135deg,#e6c55b,#b88915);
+      color:#111;
+      border:none;
+      font-weight:700;
+    }
+
+    .mobile-quick-nav{
+      display:none;
+    }
+
+    .page-section{
+      padding:84px 0;
+    }
+
+    .hero{
+      padding:36px 0 28px;
+    }
+
+    .hero-shell{
+      display:grid;
+      grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .hero-content,
+    .hero-visual{
+      min-width:0;
+    }
+
+    .hero-content{
+      position:relative;
+      padding:42px;
+      border-radius:var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero-content::before{
+      content:"";
+      position:absolute;
+      width:260px;
+      height:260px;
+      right:-80px;
+      top:-80px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(212,175,55,.18), transparent 70%);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--gold-soft);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.82rem;
+      margin-bottom:16px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:42px;
+      height:1px;
+      background:linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .hero-title{
+      font-size:clamp(2.4rem,5vw,5rem);
+      line-height:.98;
+      margin:0 0 18px;
+      letter-spacing:-.03em;
+    }
+
+    .hero-title .gold{
+      display:block;
+      color:var(--gold);
+    }
+
+    .hero-text{
+      max-width:680px;
+      color:var(--muted);
+      font-size:1.04rem;
+      line-height:1.95;
+      margin:0 0 26px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:28px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.25s ease;
+    }
+
+    .btn:hover{ transform:translateY(-2px); }
+
+    .btn-primary{
+      background:linear-gradient(135deg,#e6c55b,#b88915);
+      color:#111;
+      box-shadow:0 14px 34px rgba(212,175,55,.18);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.035);
+      border:1px solid var(--line);
+      color:var(--text);
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .stat{
+      padding:18px;
+      border-radius:var(--radius-lg);
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    .stat strong{
+      display:block;
+      color:var(--gold-soft);
+      margin-bottom:6px;
+      font-size:1.08rem;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.92rem;
+      line-height:1.7;
+    }
+
+    .hero-visual{
+      display:grid;
+      grid-template-rows:1fr auto;
+      gap:18px;
+    }
+
+    .hero-main{
+      min-height:520px;
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#000;
+      position:relative;
+    }
+
+    .hero-main::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.22));
+    }
+
+    .hero-main video,
+    .hero-main img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .hero-strip{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .mini-media{
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      min-height:120px;
+    }
+
+    .mini-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .6s ease;
+    }
+
+    .mini-media:hover img{
+      transform:scale(1.06);
+    }
+
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:28px;
+      flex-wrap:wrap;
+    }
+
+    .section-title{
+      margin:0 0 10px;
+      font-size:clamp(1.8rem,3vw,3rem);
+      line-height:1.12;
+    }
+
+    .section-intro{
+      margin:0;
+      max-width:760px;
+      color:var(--muted);
+      line-height:1.9;
+    }
+
+    .signature{
+      color:var(--gold-soft);
+      font-size:.92rem;
+      padding:12px 16px;
+      border:1px solid var(--line-gold);
+      border-radius:999px;
+      background:rgba(212,175,55,.06);
+      white-space:nowrap;
+    }
+
+    .editorial-grid{
+      display:grid;
+      grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .info-card{
+      padding:32px;
+      border-radius:var(--radius-xl);
+      background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .feature-list{
+      display:grid;
+      gap:14px;
+      margin-top:20px;
+    }
+
+    .feature-item{
+      padding:16px 18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.07);
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .feature-item strong{
+      color:var(--gold-soft);
+    }
+
+    .material-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .material{
+      padding:18px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.07);
+      background:rgba(255,255,255,.03);
+    }
+
+    .material strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--gold-soft);
+    }
+
+    .material span{
+      color:var(--muted);
+      line-height:1.7;
+      font-size:.94rem;
+    }
+
+    .showcase{
+      display:grid;
+      gap:18px;
+    }
+
+    .showcase-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .media-card{
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:rgba(255,255,255,.03);
+      min-height:280px;
+    }
+
+    .media-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .8s ease;
+    }
+
+    .media-card:hover img{
+      transform:scale(1.06);
+    }
+
+    .process-wrap{
+      display:grid;
+      grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);
+      gap:24px;
+      align-items:start;
+    }
+
+    .process-panel{
+      position:sticky;
+      top:104px;
+      padding:32px;
+      border-radius:var(--radius-xl);
+      background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .process-steps{
+      display:grid;
+      gap:18px;
+    }
+
+    .timeline-step{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:16px;
+      padding:20px;
+      border-radius:24px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow);
+    }
+
+    .timeline-step .num{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(212,175,55,.14);
+      border:1px solid rgba(212,175,55,.18);
+      color:var(--gold-soft);
+      font-weight:700;
+      flex-shrink:0;
+    }
+
+    .timeline-step h3{
+      margin:0 0 8px;
+      font-size:1.08rem;
+    }
+
+    .timeline-step p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .cta-band{
+      padding:38px;
+      border-radius:var(--radius-xl);
+      text-align:center;
+      background:
+        radial-gradient(circle at top center, rgba(212,175,55,.12), transparent 40%),
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .cta-band p{
+      max-width:760px;
+      margin:0 auto 22px;
+      color:var(--muted);
+      line-height:1.9;
+    }
+
+    .mobile-fab{
+      display:none;
+    }
+
+    footer{
+      padding:30px 0 50px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    @media (max-width: 1100px){
+      .hero-shell,
+      .editorial-grid,
+      .process-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .process-panel{
+        position:static;
+      }
+    }
+
+    @media (max-width: 900px){
+      .nav{
+        justify-content:center;
+      }
+
+      .brand{
+        width:100%;
+        justify-content:center;
+      }
+
+      .nav-links{
+        width:100%;
+        justify-content:center;
+      }
+
+      .nav-dropdown{
+        width:100%;
+      }
+
+      .nav-dropdown-trigger{
+        width:100%;
+        justify-content:center;
+      }
+
+      .nav-dropdown-menu{
+        position:static;
+        min-width:100%;
+        margin-top:8px;
+      }
+
+      .mobile-quick-nav{
+        display:flex;
+        gap:10px;
+        overflow:auto;
+        padding:8px 16px 0;
+        margin:0 -16px;
+        scrollbar-width:none;
+        -webkit-overflow-scrolling:touch;
+      }
+
+      .mobile-quick-nav::-webkit-scrollbar{
+        display:none;
+      }
+
+      .mobile-quick-link{
+        flex:0 0 auto;
+        padding:10px 14px;
+        border-radius:999px;
+        border:1px solid rgba(212,175,55,.16);
+        background:rgba(255,255,255,.04);
+        color:var(--gold-soft);
+        font-size:.88rem;
+        white-space:nowrap;
+        transition:.25s ease;
+      }
+
+      .mobile-quick-link.active{
+        background:linear-gradient(135deg,#e6c55b,#b88915);
+        color:#111;
+        border-color:transparent;
+        box-shadow:0 10px 24px rgba(212,175,55,.18);
+      }
+
+      .hero{
+        padding:18px 0 18px;
+      }
+
+      .page-section{
+        padding:42px 0;
+      }
+
+      .hero-shell{
+        gap:16px;
+      }
+
+      .hero-content{
+        padding:20px;
+        border-radius:24px;
+      }
+
+      .hero-title{
+        font-size:2.25rem;
+        line-height:1.02;
+        margin-bottom:14px;
+      }
+
+      .hero-text,
+      .section-intro,
+      .timeline-step p,
+      .cta-band p{
+        font-size:.97rem;
+        line-height:1.85;
+      }
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .hero-stats,
+      .hero-strip,
+      .material-grid,
+      .showcase-row{
+        grid-template-columns:1fr;
+      }
+
+      .stat,
+      .material,
+      .feature-item{
+        padding:14px 16px;
+        border-radius:18px;
+      }
+
+      .hero-main{
+        min-height:0;
+        order:-1;
+      }
+
+      .mini-media{
+        min-height:92px;
+        border-radius:14px;
+      }
+
+      .section-head{
+        margin-bottom:18px;
+      }
+
+      .section-title{
+        font-size:1.65rem;
+        margin-bottom:8px;
+      }
+
+      .signature{
+        font-size:.82rem;
+        padding:9px 12px;
+      }
+
+      .editorial-grid,
+      .process-wrap{
+        gap:16px;
+      }
+
+      .info-card,
+      .process-panel,
+      .cta-band{
+        padding:20px;
+        border-radius:24px;
+      }
+
+      .media-card{
+        min-height:190px;
+        border-radius:20px;
+      }
+
+      .timeline-step{
+        grid-template-columns:1fr;
+        gap:12px;
+        padding:16px;
+        border-radius:20px;
+      }
+
+      .timeline-step .num{
+        width:42px;
+        height:42px;
+      }
+
+      .mobile-fab{
+        display:grid;
+        place-items:center;
+        position:fixed;
+        inset-inline-end:16px;
+        bottom:16px;
+        z-index:1200;
+        width:54px;
+        height:54px;
+        border:none;
+        border-radius:50%;
+        background:linear-gradient(135deg,#e6c55b,#b88915);
+        color:#111;
+        font-size:22px;
+        font-weight:700;
+        box-shadow:0 18px 36px rgba(0,0,0,.35);
+      }
+
+      body{
+        padding-bottom:84px;
+      }
+    }
+  
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .menu-toggle{
+      display:none;
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);
+      color:var(--gold-soft);
+      font-size:1rem;
+      cursor:pointer;
+    }
+
+    @media (max-width:820px){
+      .menu-toggle{
+        display:inline-grid;
+        place-items:center;
+      }
+
+      .nav{
+        flex-wrap:wrap;
+      }
+
+      .nav-links{
+        width:100%;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:flex-start;
+        padding:16px;
+        background:rgba(255,255,255,.03);
+        border:1px solid rgba(255,255,255,.08);
+        border-radius:18px;
+        margin-top:8px;
+      }
+
+      .nav-links.open{
+        display:flex;
+      }
+
+      .nav-dropdown{
+        width:100%;
+      }
+
+      .nav-dropdown-trigger{
+        width:100%;
+        justify-content:space-between;
+      }
+
+      .nav-dropdown-menu{
+        position:static;
+        left:auto;
+        right:auto;
+        min-width:100%;
+        margin-top:10px;
+        border-radius:16px;
+        box-shadow:none;
+        background:rgba(0,0,0,.18);
+      }
+
+      .nav-actions{
+        margin-inline-start:auto;
+      }
+    }
+
+    @media (max-width:560px){
+      .nav-actions{
+        width:auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="AL BAZLT AL RAMADY">
+      <img class="brand-logo" src="images/logo.png" alt="AL BAZLT AL RAMADY Logo" />
+      <div class="brand-text">
+        <span id="brandName">AL BAZLT AL RAMADY</span>
+        <small id="brandSub">Technical Services</small>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" id="navHome">Home</a>
+
+      <div class="nav-dropdown" id="servicesDropdown">
+        <button class="nav-dropdown-trigger" id="navServicesToggle" type="button">
+          <span id="navServices">Our Services</span>
+          <span class="nav-dropdown-arrow">▾</span>
+        </button>
+
+        <div class="nav-dropdown-menu">
+          <a href="smart-home-systems.html" id="serviceSmartHome">Smart Home Systems</a>
+          <a href="custom-woodworks.html" id="serviceWoodworks">Custom Woodworks</a>
+          <a href="gypsum-decorative-finishes.html" id="serviceGypsum">Gypsum & Decorative Finishes</a>
+          <a href="tiles-ceramic-installation.html" id="serviceTiles">Tiles & Ceramic Installation</a>
+          <a href="electrical-maintenance.html" id="serviceElectrical">Electrical Maintenance</a>
+          <a href="luxury-finishing-details.html" id="serviceLuxury">Luxury Finishing Details</a>
+        </div>
+      </div>
+
+      <a href="index.html#about" id="navAbout">About</a>
+      <a href="index.html#contact" id="navContact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle">العربية</button>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="mobile-quick-nav" id="mobileQuickNav">
+      <a class="mobile-quick-link active" href="#top" id="mNavTop">Intro</a>
+      <a class="mobile-quick-link" href="#overview" id="mNavOverview">Overview</a>
+      <a class="mobile-quick-link" href="#showcase" id="mNavShowcase">Gallery</a>
+      <a class="mobile-quick-link" href="#process" id="mNavProcess">Process</a>
+      <a class="mobile-quick-link" href="#contact-cta" id="mNavCTA">Contact</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-shell">
+        <div class="hero-content">
+          <div class="eyebrow" id="heroEyebrow">Signature Craft</div>
+          <h1 class="hero-title">
+            <span id="heroTitle1">Custom</span>
+            <span class="gold" id="heroTitle2">Woodworks</span>
+          </h1>
+          <p class="hero-text" id="heroText">
+            We create tailored wood solutions that elevate interiors with warmth,
+            precision, and timeless detail, from wall cladding and wardrobes to TV
+            units, partitions, and statement joinery.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="index.html#contact" id="btnOrder">Request This Service</a>
+            <a class="btn btn-secondary" href="index.html#services" id="btnBack">Back to Services</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong id="stat1Title">Custom Fit</strong>
+              <span id="stat1Text">Every detail is designed around the space and how it is used.</span>
+            </div>
+            <div class="stat">
+              <strong id="stat2Title">Refined Finish</strong>
+              <span id="stat2Text">Premium materials and elegant finishes that complement the interior concept.</span>
+            </div>
+            <div class="stat">
+              <strong id="stat3Title">Built to Last</strong>
+              <span id="stat3Text">Craftsmanship focused on durability, clean execution, and long-term value.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-main">
+            <video autoplay muted loop playsinline poster="images/poster-woodworks.jpg">
+               <source src="videos/woodworks-main.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+              <script>
+              (function(){
+                var v = document.querySelector('video');
+                if(!v) return;
+                function run(){
+                  v.muted = true; v.defaultMuted = true; v.setAttribute('muted','');
+                  v.playsInline = true;
+                  try { var p = v.play(); if(p && p.catch) p.catch(function(){}); } catch(e){}
+                }
+                run();
+                if(v.readyState < 3) v.addEventListener('canplay', run);
+                ['pointerdown','touchstart'].forEach(function(ev){
+                  document.addEventListener(ev, function(){ run(); }, { once:true, passive:true });
+                });
+              })();
+              </script>
+          </div>
+          <div class="hero-strip">
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="overview">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" id="overviewEyebrow">Service Overview</div>
+            <h2 class="section-title" id="overviewTitle">A cleaner, warmer identity for the space</h2>
+            <p class="section-intro" id="overviewIntro">
+              This service is built for projects that need custom wood elements to feel intentional,
+              elegant, and highly functional rather than generic or oversized.
+            </p>
+          </div>
+          <div class="signature" id="overviewTag">Tailored detailing • Premium finish</div>
+        </div>
+
+        <div class="editorial-grid">
+          <div class="info-card">
+            <div class="eyebrow" id="includeEyebrow">What we include</div>
+            <h3 class="section-title" id="includeTitle" style="font-size:1.8rem;">What does the scope cover?</h3>
+            <div class="feature-list">
+              <div class="feature-item" id="include1"><strong>1.</strong> Decorative wall cladding, panel systems, and statement wood surfaces.</div>
+              <div class="feature-item" id="include2"><strong>2.</strong> Wardrobes, cabinets, storage, shelving, and built-in units.</div>
+              <div class="feature-item" id="include3"><strong>3.</strong> TV units, office joinery, partitions, doors, and personalized details.</div>
+              <div class="feature-item" id="include4"><strong>4.</strong> Finishes selected around the visual style, durability, and daily use.</div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="eyebrow" id="materialsEyebrow">Value & Materials</div>
+            <h3 class="section-title" id="materialsTitle" style="font-size:1.8rem;">Why clients choose this direction</h3>
+
+            <div class="material-grid">
+              <div class="material">
+                <strong id="material1Title">Elegant Presence</strong>
+                <span id="material1Text">Wood brings warmth and a premium identity that softens and upgrades the interior.</span>
+              </div>
+              <div class="material">
+                <strong id="material2Title">Smart Space Use</strong>
+                <span id="material2Text">Tailored storage and fitted pieces make the layout more useful without visual clutter.</span>
+              </div>
+              <div class="material">
+                <strong id="material3Title">Design Consistency</strong>
+                <span id="material3Text">The finish, lines, and proportions are coordinated with the whole project.</span>
+              </div>
+              <div class="material">
+                <strong id="material4Title">Craft & Durability</strong>
+                <span id="material4Text">A stronger result through better detailing, clean execution, and lasting quality.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="showcase">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" id="showcaseEyebrow">Visual Showcase</div>
+            <h2 class="section-title" id="showcaseTitle">Different moments, one consistent language</h2>
+            <p class="section-intro" id="showcaseIntro">
+              Use this section for strong project imagery that highlights materials, proportions,
+              joins, handles, lighting integration, and the final finish.
+            </p>
+          </div>
+        </div>
+
+        <div class="showcase">
+          <div class="showcase-row">
+            <div class="media-card"><img src="images/woodworks-1.jpg" alt="Woodworks showcase 1" /></div>
+            <div class="media-card"><img src="images/woodworks-4.jpg" alt="Woodworks showcase 2" /></div>
+          </div>
+          <div class="showcase-row">
+            <div class="media-card"><img src="images/woodworks-2.jpg" alt="Woodworks showcase 3" /></div>
+            <div class="media-card"><img src="images/woodworks-3.jpg" alt="Woodworks showcase 4" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="process">
+      <div class="container process-wrap">
+        <div class="process-panel">
+          <div class="eyebrow" id="processEyebrow">Execution Flow</div>
+          <h2 class="section-title" id="processTitle">From concept to final installation</h2>
+          <p class="section-intro" id="processIntro">
+            A structured process helps keep the design clear, the materials aligned, and the final installation precise.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div class="timeline-step">
+            <div class="num">1</div>
+            <div>
+              <h3 id="step1Title">Concept & Measurement</h3>
+              <p id="step1Text">We review the space, take accurate measurements, and define the visual direction and practical needs.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="num">2</div>
+            <div>
+              <h3 id="step2Title">Material & Design Proposal</h3>
+              <p id="step2Text">We select the suitable finishes, colors, textures, and detailing approach for the project.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="num">3</div>
+            <div>
+              <h3 id="step3Title">Fabrication & Installation</h3>
+              <p id="step3Text">Fabrication is completed with precision, then the final installation is handled carefully for a refined result.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="contact-cta">
+      <div class="container">
+        <div class="cta-band">
+          <div class="eyebrow" id="ctaEyebrow">Ready to start?</div>
+          <h2 class="section-title" id="ctaTitle">Let us shape the woodwork around your project</h2>
+          <p id="ctaText">
+            This page is fully prepared with the video hero and the responsive layout,
+            while preserving the main brand colors and the logo across the design.
+          </p>
+          <div class="hero-actions" style="justify-content:center; margin-bottom:0;">
+            <a class="btn btn-primary" href="index.html#contact" id="ctaBtn1">Request This Service</a>
+            <a class="btn btn-secondary" href="index.html#services" id="ctaBtn2">Back to Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footerText">
+    © 2026 Al Bazlt Al Ramady Technical Services. All rights reserved.
+  </footer>
+
+  <script>
+    const content = {
+      en: {
+        pageTitle: "Custom Woodworks | Al Bazlt Al Ramady",
+        pageDesc: "A refined custom woodworks service page with video hero, bilingual support, premium styling, and a mobile-friendly layout.",
+        brandName: "AL BAZLT AL RAMADY",
+        brandSub: "Technical Services",
+        navHome: "Home",
+        navServices: "Our Services",
+        serviceHomePage: "Main Page",
+        serviceSmartHome: "Smart Home Systems",
+        serviceWoodworks: "Custom Woodworks",
+        serviceGypsum: "Gypsum & Decorative Finishes",
+        serviceTiles: "Tiles & Ceramic Installation",
+        serviceElectrical: "Electrical Maintenance",
+        serviceLuxury: "Luxury Finishing Details",
+        navAbout: "About",
+        navContact: "Contact",
+        heroEyebrow: "Signature Craft",
+        heroTitle1: "Custom",
+        heroTitle2: "Woodworks",
+        heroText: "We create tailored wood solutions that elevate interiors with warmth, precision, and timeless detail, from wall cladding and wardrobes to TV units, partitions, and statement joinery.",
+        btnOrder: "Request This Service",
+        btnBack: "Back to Services",
+        stat1Title: "Custom Fit",
+        stat1Text: "Every detail is designed around the space and how it is used.",
+        stat2Title: "Refined Finish",
+        stat2Text: "Premium materials and elegant finishes that complement the interior concept.",
+        stat3Title: "Built to Last",
+        stat3Text: "Craftsmanship focused on durability, clean execution, and long-term value.",
+        overviewEyebrow: "Service Overview",
+        overviewTitle: "A cleaner, warmer identity for the space",
+        overviewIntro: "This service is built for projects that need custom wood elements to feel intentional, elegant, and highly functional rather than generic or oversized.",
+        overviewTag: "Tailored detailing • Premium finish",
+        includeEyebrow: "What we include",
+        includeTitle: "What does the scope cover?",
+        include1: "<strong>1.</strong> Decorative wall cladding, panel systems, and statement wood surfaces.",
+        include2: "<strong>2.</strong> Wardrobes, cabinets, storage, shelving, and built-in units.",
+        include3: "<strong>3.</strong> TV units, office joinery, partitions, doors, and personalized details.",
+        include4: "<strong>4.</strong> Finishes selected around the visual style, durability, and daily use.",
+        materialsEyebrow: "Value & Materials",
+        materialsTitle: "Why clients choose this direction",
+        material1Title: "Elegant Presence",
+        material1Text: "Wood brings warmth and a premium identity that softens and upgrades the interior.",
+        material2Title: "Smart Space Use",
+        material2Text: "Tailored storage and fitted pieces make the layout more useful without visual clutter.",
+        material3Title: "Design Consistency",
+        material3Text: "The finish, lines, and proportions are coordinated with the whole project.",
+        material4Title: "Craft & Durability",
+        material4Text: "A stronger result through better detailing, clean execution, and lasting quality.",
+        showcaseEyebrow: "Visual Showcase",
+        showcaseTitle: "Different moments, one consistent language",
+        showcaseIntro: "Use this section for strong project imagery that highlights materials, proportions, joins, handles, lighting integration, and the final finish.",
+        processEyebrow: "Execution Flow",
+        processTitle: "From concept to final installation",
+        processIntro: "A structured process helps keep the design clear, the materials aligned, and the final installation precise.",
+        step1Title: "Concept & Measurement",
+        step1Text: "We review the space, take accurate measurements, and define the visual direction and practical needs.",
+        step2Title: "Material & Design Proposal",
+        step2Text: "We select the suitable finishes, colors, textures, and detailing approach for the project.",
+        step3Title: "Fabrication & Installation",
+        step3Text: "Fabrication is completed with precision, then the final installation is handled carefully for a refined result.",
+        ctaEyebrow: "Ready to start?",
+        ctaTitle: "Let us shape the woodwork around your project",
+        ctaText: "This page is fully prepared with the video hero and the responsive layout, while preserving the main brand colors and the logo across the design.",
+        ctaBtn1: "Request This Service",
+        ctaBtn2: "Back to Services",
+        mNavTop: "Intro",
+        mNavOverview: "Overview",
+        mNavShowcase: "Gallery",
+        mNavProcess: "Process",
+        mNavCTA: "Contact",
+        footerText: "© 2026 Al Bazlt Al Ramady Technical Services. All rights reserved.",
+        langBtn: "العربية",
+        lang: "en",
+        dir: "ltr"
+      },
+      ar: {
+        pageTitle: "الأعمال الخشبية | البازلت الرمادي",
+        pageDesc: "صفحة أعمال خشبية جاهزة بالكامل مع فيديو في المقدمة، ودعم عربي وإنجليزي، وتصميم متجاوب للموبايل والكمبيوتر.",
+        brandName: "البازلت الرمادي",
+        brandSub: "الخدمات الفنية",
+        navHome: "الرئيسية",
+        navServices: "خدماتنا",
+        serviceHomePage: "الصفحة الرئيسية",
+        serviceSmartHome: "الأنظمة الذكية",
+        serviceWoodworks: "الأعمال الخشبية",
+        serviceGypsum: "الجبس والتشطيبات الديكورية",
+        serviceTiles: "البلاط والسيراميك",
+        serviceElectrical: "الصيانة الكهربائية",
+        serviceLuxury: "تفاصيل التشطيب الفاخر",
+        navAbout: "من نحن",
+        navContact: "اتصل بنا",
+        heroEyebrow: "حرفية مميزة",
+        heroTitle1: "الأعمال",
+        heroTitle2: "الخشبية",
+        heroText: "نقدم حلولاً خشبية مصممة حسب الطلب ترتقي بالمكان من خلال الدفء والدقة والتفاصيل الراقية، من كسوة الجدران والخزائن إلى وحدات التلفاز والفواصل وعناصر النجارة المميزة.",
+        btnOrder: "اطلب هذه الخدمة",
+        btnBack: "العودة إلى الخدمات",
+        stat1Title: "تفصيل حسب المساحة",
+        stat1Text: "كل عنصر يتم تصميمه بما يناسب المكان وطريقة الاستخدام اليومية.",
+        stat2Title: "تشطيب راقٍ",
+        stat2Text: "مواد وتشطيبات أنيقة تنسجم مع هوية المشروع الداخلية.",
+        stat3Title: "متانة طويلة المدى",
+        stat3Text: "تنفيذ يعتمد على الحرفية والدقة والقيمة المستمرة مع الوقت.",
+        overviewEyebrow: "نظرة عامة",
+        overviewTitle: "هوية أدفأ وأنظف للمكان",
+        overviewIntro: "هذه الخدمة مناسبة للمشاريع التي تحتاج عناصر خشبية تبدو مقصودة وأنيقة وعملية، وليس مجرد حلول جاهزة أو تقليدية.",
+        overviewTag: "تفاصيل مخصصة • تشطيب فاخر",
+        includeEyebrow: "ما الذي نقدمه",
+        includeTitle: "ماذا يشمل نطاق الخدمة؟",
+        include1: "<strong>1.</strong> كسوة جدران وبانلات ديكورية وأسطح خشبية مميزة.",
+        include2: "<strong>2.</strong> خزائن ووحدات تخزين ورفوف ووحدات مدمجة حسب الطلب.",
+        include3: "<strong>3.</strong> وحدات تلفاز ونجارة مكتبية وفواصل وأبواب وتفاصيل خاصة بالمشروع.",
+        include4: "<strong>4.</strong> تشطيبات يتم اختيارها وفق النمط البصري والمتانة والاستخدام اليومي.",
+        materialsEyebrow: "القيمة والمواد",
+        materialsTitle: "لماذا يفضل العملاء هذا الاتجاه",
+        material1Title: "حضور أنيق",
+        material1Text: "الخشب يضيف دفئًا وهوية فاخرة ترفع مستوى المكان بصريًا.",
+        material2Title: "استغلال ذكي للمساحة",
+        material2Text: "الحلول المفصلة تجعل المساحة أكثر فاعلية بدون ازدحام بصري.",
+        material3Title: "اتساق التصميم",
+        material3Text: "التشطيب والخطوط والنسب تكون منسجمة مع كامل المشروع.",
+        material4Title: "حرفية ومتانة",
+        material4Text: "نتيجة أقوى بفضل التفاصيل الدقيقة والتنفيذ النظيف والجودة المستمرة.",
+        showcaseEyebrow: "عرض بصري",
+        showcaseTitle: "مشاهد مختلفة ضمن لغة تصميم واحدة",
+        showcaseIntro: "استخدم هذا القسم لعرض صور قوية تبرز المواد والنسب والتقاء التفاصيل والمقابض والإضاءة المدمجة والتشطيب النهائي.",
+        processEyebrow: "مراحل التنفيذ",
+        processTitle: "من الفكرة إلى التركيب النهائي",
+        processIntro: "العمل وفق خطوات واضحة يساعد على ضبط التصميم والمواد وضمان تنفيذ دقيق في المرحلة النهائية.",
+        step1Title: "الفكرة والقياسات",
+        step1Text: "نراجع المساحة ونأخذ القياسات الدقيقة ونحدد التوجه البصري والاحتياجات العملية.",
+        step2Title: "اقتراح المواد والتصميم",
+        step2Text: "نختار التشطيبات والألوان والخامات والتفاصيل المناسبة لطبيعة المشروع.",
+        step3Title: "التصنيع والتركيب",
+        step3Text: "يتم التصنيع بدقة ثم التركيب بعناية للحصول على نتيجة نهائية راقية ونظيفة.",
+        ctaEyebrow: "جاهز للبدء؟",
+        ctaTitle: "دعنا نصنع الأعمال الخشبية بما يناسب مشروعك",
+        ctaText: "هذه الصفحة جاهزة بالكامل مع الفيديو في المقدمة والتصميم المتجاوب، مع المحافظة على الألوان الأساسية وحضور اللوغو في كامل الصفحة.",
+        ctaBtn1: "اطلب هذه الخدمة",
+        ctaBtn2: "العودة إلى الخدمات",
+        mNavTop: "البداية",
+        mNavOverview: "الخدمة",
+        mNavShowcase: "الصور",
+        mNavProcess: "التنفيذ",
+        mNavCTA: "تواصل",
+        footerText: "© 2026 البازلت الرمادي للخدمات الفنية. جميع الحقوق محفوظة.",
+        langBtn: "English",
+        lang: "ar",
+        dir: "rtl"
+      }
+    };
+
+    function setLanguage(language) {
+      const t = content[language];
+      document.documentElement.lang = t.lang;
+      document.documentElement.dir = t.dir;
+      document.title = t.pageTitle;
+      document.querySelector('meta[name="description"]').setAttribute("content", t.pageDesc);
+
+      const ids = [
+        "brandName","brandSub","navHome","navServices","serviceHomePage","serviceSmartHome","serviceWoodworks","serviceGypsum","serviceTiles","serviceElectrical","serviceLuxury","navAbout","navContact",
+        "heroEyebrow","heroTitle1","heroTitle2","heroText","btnOrder","btnBack",
+        "stat1Title","stat1Text","stat2Title","stat2Text","stat3Title","stat3Text",
+        "overviewEyebrow","overviewTitle","overviewIntro","overviewTag",
+        "includeEyebrow","includeTitle","include1","include2","include3","include4",
+        "materialsEyebrow","materialsTitle","material1Title","material1Text","material2Title","material2Text","material3Title","material3Text","material4Title","material4Text",
+        "showcaseEyebrow","showcaseTitle","showcaseIntro",
+        "processEyebrow","processTitle","processIntro",
+        "step1Title","step1Text","step2Title","step2Text","step3Title","step3Text",
+        "ctaEyebrow","ctaTitle","ctaText","ctaBtn1","ctaBtn2",
+        "mNavTop","mNavOverview","mNavShowcase","mNavProcess","mNavCTA",
+        "footerText"
+      ];
+
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (typeof t[id] !== "undefined") el.innerHTML = t[id];
+      });
+
+      document.getElementById("langToggle").textContent = t.langBtn;
+      localStorage.setItem("alb_lang", language);
+    }
+
+    const langToggle = document.getElementById("langToggle");
+    langToggle.addEventListener("click", function(){
+      const current = localStorage.getItem("alb_lang") || "en";
+      setLanguage(current === "en" ? "ar" : "en");
+    });
+
+    const servicesDropdown = document.getElementById("servicesDropdown");
+    const navServicesToggle = document.getElementById("navServicesToggle");
+
+    if (servicesDropdown && navServicesToggle) {
+      navServicesToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        servicesDropdown.classList.toggle("open");
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!servicesDropdown.contains(e.target)) {
+          servicesDropdown.classList.remove("open");
+        }
+      });
+    }
+
+    const mobileFab = document.getElementById("mobileFab");
+    if (mobileFab) {
+      mobileFab.addEventListener("click", function(){
+        window.location.href = "index.html#contact";
+      });
+    }
+
+    const quickLinks = document.querySelectorAll(".mobile-quick-link");
+    const observedSections = ["top","overview","showcase","process","contact-cta"]
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    if ("IntersectionObserver" in window && quickLinks.length && observedSections.length) {
+      const quickObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.id;
+          quickLinks.forEach(link => {
+            const active = link.getAttribute("href") === "#" + id;
+            link.classList.toggle("active", active);
+          });
+        });
+      }, { threshold: 0.45 });
+
+      observedSections.forEach(section => quickObserver.observe(section));
+    }
+
+    quickLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        quickLinks.forEach(item => item.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+
+
+    const pageMenuToggle = document.getElementById("menuToggle");
+    const pageNavLinks = document.getElementById("navLinks");
+    const pageServicesDropdown = document.getElementById("servicesDropdown");
+
+    if (pageMenuToggle && pageNavLinks) {
+      pageMenuToggle.addEventListener("click", function () {
+        pageNavLinks.classList.toggle("open");
+        if (!pageNavLinks.classList.contains("open") && pageServicesDropdown) {
+          pageServicesDropdown.classList.remove("open");
+        }
+      });
+
+      document.querySelectorAll("#navLinks a").forEach(link => {
+        link.addEventListener("click", function () {
+          pageNavLinks.classList.remove("open");
+          if (pageServicesDropdown) {
+            pageServicesDropdown.classList.remove("open");
+          }
+        });
+      });
+    }
+
+    const savedLang = localStorage.getItem("alb_lang") || "en";
+    setLanguage(savedLang);
+  </script>
+</body>
+</html>

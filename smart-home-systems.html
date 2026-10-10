@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Home Systems | Al Bazlt Al Ramady</title>
+  <meta name="description" content="Full service page for smart home systems with images, benefits, workflow, and contact action.">
+  <link rel="canonical" href="https://bazeltgroup.ae/smart-home-systems.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bazeltgroup.ae/smart-home-systems.html">
+  <meta property="og:title" content="Smart Home Systems | Al Bazlt Al Ramady">
+  <meta property="og:description" content="Full service page for smart home systems with images, benefits, workflow, and contact action.">
+  <meta name="robots" content="index,follow">
+
+  <style>
+    :root{
+      --bg:#080808;
+      --text:#f5f0e6;
+      --muted:rgba(245,240,230,0.74);
+      --gold:#d4af37;
+      --gold-soft:#f1dd9a;
+      --shadow:0 20px 50px rgba(0,0,0,0.35);
+      --radius:24px;
+      --container:1200px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,Tahoma,sans-serif;
+      background:linear-gradient(180deg,#070707 0%,#0c0c0c 52%,#080808 100%);
+      color:var(--text);
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--container), calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(10,10,10,.9);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:14px 0;
+      flex-wrap:wrap;
+    }
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:bold;
+  color:var(--gold-soft);
+}
+
+.brand img{
+  width:52px;
+  height:52px;
+  object-fit:contain;
+  display:block;
+  flex-shrink:0;
+}
+
+.brand span{
+  display:block;
+  line-height:1.1;
+
+    }
+
+    .nav-links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .nav-dropdown{
+      position:relative;
+    }
+
+    .nav-dropdown-trigger{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--text);
+      cursor:pointer;
+      transition:.25s ease;
+    }
+
+    .nav-dropdown-trigger:hover{
+      border-color:rgba(212,175,55,.22);
+      color:var(--gold-soft);
+      background:rgba(212,175,55,.08);
+    }
+
+    .nav-dropdown-arrow{
+      font-size:.8rem;
+      transition:transform .25s ease;
+    }
+
+    .nav-dropdown.open .nav-dropdown-arrow{
+      transform:rotate(180deg);
+    }
+
+    .nav-dropdown-menu{
+      position:absolute;
+      top:calc(100% + 10px);
+      left:0;
+      min-width:290px;
+      display:none;
+      flex-direction:column;
+      gap:6px;
+      padding:10px;
+      border-radius:20px;
+      background:rgba(10,10,10,.96);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 20px 50px rgba(0,0,0,.35);
+      z-index:50;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu{
+      display:flex;
+    }
+
+    .nav-dropdown-menu a{
+      display:block;
+      padding:12px 14px;
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid transparent;
+      color:var(--text);
+      transition:.25s ease;
+    }
+
+    .nav-dropdown-menu a:hover{
+      color:var(--gold-soft);
+      background:rgba(212,175,55,.08);
+      border-color:rgba(212,175,55,.2);
+    }
+
+    html[dir="rtl"] .nav-dropdown-menu{
+      left:auto;
+      right:0;
+    }
+
+
+    .nav-links a,
+    .lang-btn{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--text);
+      cursor:pointer;
+    }
+
+    .lang-btn{
+      background:linear-gradient(135deg,#e6c55b,#b88915);
+      color:#111;
+      font-weight:bold;
+      border:none;
+    }
+
+    .hero{
+      padding:60px 0;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .card{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero-copy{
+      padding:36px;
+    }
+
+    .eyebrow{
+      color:var(--gold-soft);
+      font-size:.85rem;
+      margin-bottom:14px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      font-size:clamp(2rem,4vw,4rem);
+      margin:0 0 18px;
+      line-height:1.05;
+    }
+
+    h1 .gold{
+      color:var(--gold);
+      display:block;
+    }
+
+    .hero-text,
+    .section-intro,
+    .step p,
+    .caption,
+    .cta p,
+    .list li{
+      color:var(--muted);
+      line-height:1.9;
+    }
+
+    .btns{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:22px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:bold;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,#e6c55b,#b88915);
+      color:#111;
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+.hero-image video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  min-height:420px;
+  display:block;
+}
+
+    section{
+      padding:70px 0;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+
+    .content{
+      padding:28px;
+    }
+
+    .section-title{
+      font-size:2rem;
+      margin:0 0 14px;
+    }
+
+    .list{
+      margin:20px 0 0;
+      padding:0 20px;
+    }
+    .gallery-wrap{
+      position:relative;
+      margin-top:24px;
+    }
+
+    .gallery{
+      display:flex;
+      gap:18px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      scroll-behavior:smooth;
+      padding:6px 2px 12px;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+
+    .gallery::-webkit-scrollbar{
+      display:none;
+    }
+
+    .gallery-card{
+      position:relative;
+      min-width:88%;
+      flex:0 0 88%;
+      scroll-snap-align:start;
+      opacity:0;
+      transform:translateY(24px);
+      transition:
+        transform .55s ease,
+        opacity .55s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+      will-change:transform, opacity;
+    }
+
+    .gallery-card.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .gallery-card::after{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-120%;
+      width:70%;
+      height:100%;
+      background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.10),
+        transparent
+      );
+      transform:skewX(-18deg);
+      transition:left .9s ease;
+      pointer-events:none;
+    }
+
+    .gallery-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 28px 60px rgba(0,0,0,.45);
+      border-color:rgba(212,175,55,.28);
+    }
+
+    .gallery-card:hover::after{
+      left:140%;
+    }
+
+    .gallery img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      transition:transform .7s ease, filter .7s ease;
+    }
+
+    .gallery-card:hover img{
+      transform:scale(1.08);
+      filter:brightness(1.08);
+    }
+
+    .gallery .caption{
+      padding:14px;
+      transition:color .35s ease;
+    }
+
+    .gallery-card:hover .caption{
+      color:var(--gold-soft);
+    }
+
+    .gallery-arrow{
+      display:grid;
+      place-items:center;
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:56px;
+      height:56px;
+      border:none;
+      border-radius:50%;
+      background:linear-gradient(135deg,#e6c55b,#b88915);
+      color:#111;
+      font-size:26px;
+      font-weight:700;
+      cursor:pointer;
+      z-index:5;
+      box-shadow:0 16px 40px rgba(0,0,0,.42);
+      transition:transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+      opacity:.95;
+      animation:arrowPulse 1.8s ease-in-out infinite;
+    }
+
+    .gallery-arrow:hover{
+      transform:translateY(-50%) scale(1.08);
+      box-shadow:0 20px 50px rgba(0,0,0,.5);
+      opacity:1;
+    }
+
+    .gallery-arrow.prev{ left:12px; }
+    .gallery-arrow.next{ right:12px; }
+
+    .gallery-wrap::before,
+    .gallery-wrap::after{
+      content:"";
+      position:absolute;
+      top:0;
+      bottom:12px;
+      width:72px;
+      z-index:2;
+      pointer-events:none;
+    }
+
+    .gallery-wrap::before{
+      left:0;
+      background:linear-gradient(to right, rgba(8,8,8,.92), rgba(8,8,8,0));
+    }
+
+    .gallery-wrap::after{
+      right:0;
+      background:linear-gradient(to left, rgba(8,8,8,.92), rgba(8,8,8,0));
+    }
+
+    @keyframes arrowPulse{
+      0%,100%{ transform:translateY(-50%) scale(1); }
+      50%{ transform:translateY(-50%) scale(1.06); }
+    }
+
+    @media (min-width: 900px){
+      .gallery{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        overflow:visible;
+        padding:0;
+      }
+
+      .gallery-card{
+        min-width:auto;
+        flex:initial;
+        opacity:1;
+        transform:none;
+      }
+
+      .gallery-arrow{
+        display:none;
+      }
+    }
+
+    @media (min-width: 1200px){
+      .gallery{
+        grid-template-columns:repeat(4,1fr);
+      }
+    }
+
+    @media (max-width: 899px){
+      .gallery-card:active{
+        transform:scale(.985);
+      }
+
+      .gallery-arrow{
+        width:48px;
+        height:48px;
+        font-size:22px;
+      }
+
+      .gallery-wrap::before,
+      .gallery-wrap::after{
+        width:46px;
+      }
+    }
+.steps{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .step{
+      padding:24px;
+    }
+
+    .step-number{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(212,175,55,.15);
+      color:var(--gold-soft);
+      margin-bottom:12px;
+      font-weight:bold;
+    }
+
+    .cta{
+      padding:34px;
+      text-align:center;
+    }
+
+    footer{
+      padding:30px 0 50px;
+      text-align:center;
+      color:var(--muted);
+    }
+
+    @media (max-width: 900px){
+      .hero-grid,
+      .grid-2,
+      .gallery,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .hero-image{
+        min-width:0;
+      }
+
+      .hero-image video{
+        min-height:0;
+        height:auto;
+        aspect-ratio:16/9;
+      }
+    }
+  
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .menu-toggle{
+      display:none;
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);
+      color:var(--gold-soft);
+      font-size:1rem;
+      cursor:pointer;
+    }
+
+    @media (max-width:820px){
+      .menu-toggle{
+        display:inline-grid;
+        place-items:center;
+      }
+
+      .nav{
+        flex-wrap:wrap;
+      }
+
+      .nav-links{
+        width:100%;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:flex-start;
+        padding:16px;
+        background:rgba(255,255,255,.03);
+        border:1px solid rgba(255,255,255,.08);
+        border-radius:18px;
+        margin-top:8px;
+      }
+
+      .nav-links.open{
+        display:flex;
+      }
+
+      .nav-dropdown{
+        width:100%;
+      }
+
+      .nav-dropdown-trigger{
+        width:100%;
+        justify-content:space-between;
+      }
+
+      .nav-dropdown-menu{
+        position:static;
+        left:auto;
+        right:auto;
+        min-width:100%;
+        margin-top:10px;
+        border-radius:16px;
+        box-shadow:none;
+        background:rgba(0,0,0,.18);
+      }
+
+      .nav-actions{
+        margin-inline-start:auto;
+      }
+    }
+
+    @media (max-width:560px){
+      .nav-actions{
+        width:auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="AL BAZLT AL RAMADY">
+      <img class="brand-logo" src="images/logo.png" alt="AL BAZLT AL RAMADY Logo" />
+      <div class="brand-text">
+        <span id="brandName">AL BAZLT AL RAMADY</span>
+        <small id="brandSub">Technical Services</small>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" id="navHome">Home</a>
+
+      <div class="nav-dropdown" id="servicesDropdown">
+        <button class="nav-dropdown-trigger" id="navServicesToggle" type="button">
+          <span id="navServices">Our Services</span>
+          <span class="nav-dropdown-arrow">▾</span>
+        </button>
+
+        <div class="nav-dropdown-menu">
+          <a href="smart-home-systems.html" id="serviceSmartHome">Smart Home Systems</a>
+          <a href="custom-woodworks.html" id="serviceWoodworks">Custom Woodworks</a>
+          <a href="gypsum-decorative-finishes.html" id="serviceGypsum">Gypsum & Decorative Finishes</a>
+          <a href="tiles-ceramic-installation.html" id="serviceTiles">Tiles & Ceramic Installation</a>
+          <a href="electrical-maintenance.html" id="serviceElectrical">Electrical Maintenance</a>
+          <a href="luxury-finishing-details.html" id="serviceLuxury">Luxury Finishing Details</a>
+        </div>
+      </div>
+
+      <a href="index.html#about" id="navAbout">About</a>
+      <a href="index.html#contact" id="navContact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle">العربية</button>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card hero-copy">
+          <div class="eyebrow" id="heroEyebrow">SPECIALIZED SERVICE</div>
+          <h1>
+            <span id="heroTitle1">Smart Home</span>
+            <span class="gold" id="heroTitle2">Systems</span>
+          </h1>
+          <p class="hero-text" id="heroText">
+            We provide practical and elegant smart home solutions that combine comfort,
+            security, and easy control with a modern lifestyle experience.
+          </p>
+
+          <div class="btns">
+            <a class="btn btn-primary" href="index.html#contact" id="btnOrder">Request This Service</a>
+            <a class="btn btn-secondary" href="index.html#services" id="btnBack">Back to Services</a>
+          </div>
+        </div>
+
+<div class="card hero-image">
+  <video autoplay muted loop playsinline poster="images/smat-home-1.jpg">
+    <source src="videos/smart-home.mp4" type="video/mp4">
+  </video>
+    <script>
+    (function(){
+      var v = document.querySelector('video');
+      if(!v) return;
+      function run(){
+        v.muted = true; v.defaultMuted = true; v.setAttribute('muted','');
+        v.playsInline = true;
+        try { var p = v.play(); if(p && p.catch) p.catch(function(){}); } catch(e){}
+      }
+      run();
+      if(v.readyState < 3) v.addEventListener('canplay', run);
+      ['pointerdown','touchstart'].forEach(function(ev){
+        document.addEventListener(ev, function(){ run(); }, { once:true, passive:true });
+      });
+    })();
+    </script>
+</div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <div class="card content">
+          <div class="eyebrow" id="aboutEyebrow">SERVICE OVERVIEW</div>
+          <h2 class="section-title" id="aboutTitle">What does this service include?</h2>
+          <p class="section-intro" id="aboutIntro">
+            This page clearly explains the service so the client understands what is provided,
+            what value it adds, and how the work is delivered.
+          </p>
+
+          <ul class="list">
+            <li id="about1">Smart control for lighting, curtains, and daily scenes.</li>
+            <li id="about2">Integration with cameras, access, and alerts.</li>
+            <li id="about3">Central control through app-based management.</li>
+            <li id="about4">A scalable setup prepared for future expansion.</li>
+          </ul>
+        </div>
+
+        <div class="card content">
+          <div class="eyebrow" id="benefitsEyebrow">CLIENT BENEFITS</div>
+          <h2 class="section-title" id="benefitsTitle">Why choose this service?</h2>
+
+          <ul class="list">
+            <li id="benefit1">Improves comfort in homes and offices.</li>
+            <li id="benefit2">Supports better energy efficiency.</li>
+            <li id="benefit3">Adds a premium modern touch to the property.</li>
+            <li id="benefit4">Makes everyday control easier and faster.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="eyebrow" id="galleryEyebrow">SERVICE GALLERY</div>
+        <h2 class="section-title" id="galleryTitle">Illustrative Images</h2>
+        <p class="section-intro" id="galleryIntro">
+          A closer look at the smart control, security, and automation solutions we deliver.
+        </p>
+
+        
+<div class="gallery-wrap">
+          <button class="gallery-arrow prev" type="button" aria-label="Previous image" title="Previous">&#10094;</button>
+
+          <div class="gallery" id="serviceGallery">
+            <div class="card gallery-card">
+              <img src="images/smat-home-1.jpg" alt="Service 1">
+              <div class="caption" id="gallery1">Smart control panels that match the interior design.</div>
+            </div>
+
+            <div class="card gallery-card">
+              <img src="images/smat-home-2.jpg" alt="Service 2">
+              <div class="caption" id="gallery2">Easy integration of lighting, curtains, and scenes.</div>
+            </div>
+
+            <div class="card gallery-card">
+              <img src="images/smat-home-3.jpg" alt="Service 3">
+              <div class="caption" id="gallery3">Modern solutions with a refined technical touch.</div>
+            </div>
+
+            <div class="card gallery-card">
+              <img src="images/smat-home-4.jpg" alt="Service 4">
+              <div class="caption" id="gallery4">Get the protection you deserve with high-quality surveillance cameras, delivering clear vision day and night.</div>
+            </div>
+          </div>
+
+          <button class="gallery-arrow next" type="button" aria-label="Next image" title="Next">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="eyebrow" id="stepsEyebrow">WORKFLOW</div>
+        <h2 class="section-title" id="stepsTitle">How is the service delivered?</h2>
+
+        <div class="steps">
+          <div class="card step">
+            <div class="step-number">1</div>
+            <h3 id="step1Title">Needs Assessment</h3>
+            <p id="step1Text">We understand the property type, usage style, and actual requirements.</p>
+          </div>
+
+          <div class="card step">
+            <div class="step-number">2</div>
+            <h3 id="step2Title">Solution Proposal</h3>
+            <p id="step2Text">We define the right devices and explain the integration and execution plan.</p>
+          </div>
+
+          <div class="card step">
+            <div class="step-number">3</div>
+            <h3 id="step3Title">Installation & Handover</h3>
+            <p id="step3Text">Installation, programming, testing, and final delivery are completed smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card cta">
+          <div class="eyebrow" id="ctaEyebrow">READY TO START?</div>
+          <h2 class="section-title" id="ctaTitle">Request the Service Now</h2>
+          <p id="ctaText">Use this button to connect the client directly to the contact section on the main page.</p>
+
+          <div class="btns" style="justify-content:center">
+            <a class="btn btn-primary" href="index.html#contact" id="ctaBtn1">Request This Service</a>
+            <a class="btn btn-secondary" href="index.html#services" id="ctaBtn2">Back to Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footerText">
+    © 2026 Al Bazlt Al Ramady Technical Services. All rights reserved.
+  </footer>
+
+  <script>
+    const content = {
+      en: {
+        pageTitle: "Smart Home Systems | Al Bazlt Al Ramady",
+        pageDesc: "Full service page for smart home systems with images, benefits, workflow, and contact action.",
+        brandName: "AL BAZLT AL RAMADY",
+        navHome: "Home",
+        navServices: "Our Services",
+        serviceHomePage: "Main Page",
+        serviceSmartHome: "Smart Home Systems",
+        serviceWoodworks: "Custom Woodworks",
+        serviceGypsum: "Gypsum & Decorative Finishes",
+        serviceTiles: "Tiles & Ceramic Installation",
+        serviceElectrical: "Electrical Maintenance",
+        serviceLuxury: "Luxury Finishing Details",
+        navAbout: "About",
+        navContact: "Contact",
+        heroEyebrow: "SPECIALIZED SERVICE",
+        heroTitle1: "Smart Home",
+        heroTitle2: "Systems",
+        heroText: "We provide practical and elegant smart home solutions that combine comfort, security, and easy control with a modern lifestyle experience.",
+        btnOrder: "Request This Service",
+        btnBack: "Back to Services",
+        aboutEyebrow: "SERVICE OVERVIEW",
+        aboutTitle: "What does this service include?",
+        aboutIntro: "This page clearly explains the service so the client understands what is provided, what value it adds, and how the work is delivered.",
+        about1: "Smart control for lighting, curtains, and daily scenes.",
+        about2: "Integration with cameras, access, and alerts.",
+        about3: "Central control through app-based management.",
+        about4: "A scalable setup prepared for future expansion.",
+        benefitsEyebrow: "CLIENT BENEFITS",
+        benefitsTitle: "Why choose this service?",
+        benefit1: "Improves comfort in homes and offices.",
+        benefit2: "Supports better energy efficiency.",
+        benefit3: "Adds a premium modern touch to the property.",
+        benefit4: "Makes everyday control easier and faster.",
+        galleryEyebrow: "SERVICE GALLERY",
+        galleryTitle: "Illustrative Images",
+        galleryIntro: "A closer look at the smart control, security, and automation solutions we deliver.",
+        gallery1: "Smart control panels that match the interior design.",
+        gallery2: "Easy integration of lighting, curtains, and scenes.",
+        gallery3: "Modern solutions with a refined technical touch.",
+        gallery4: "Get the protection you deserve with high-quality surveillance cameras, delivering clear vision day and night.",
+        stepsEyebrow: "WORKFLOW",
+        stepsTitle: "How is the service delivered?",
+        step1Title: "Needs Assessment",
+        step1Text: "We understand the property type, usage style, and actual requirements.",
+        step2Title: "Solution Proposal",
+        step2Text: "We define the right devices and explain the integration and execution plan.",
+        step3Title: "Installation & Handover",
+        step3Text: "Installation, programming, testing, and final delivery are completed smoothly.",
+        ctaEyebrow: "READY TO START?",
+        ctaTitle: "Request the Service Now",
+        ctaText: "Use this button to connect the client directly to the contact section on the main page.",
+        ctaBtn1: "Request This Service",
+        ctaBtn2: "Back to Services",
+        footerText: "© 2026 Al Bazlt Al Ramady Technical Services. All rights reserved.",
+        langBtn: "العربية",
+        lang: "en",
+        dir: "ltr"
+      },
+
+      ar: {
+        pageTitle: "أنظمة المنزل الذكي | البازلت الرمادي",
+        pageDesc: "صفحة خدمة كاملة لأنظمة المنزل الذكي مع صور ومزايا وخطوات التنفيذ وزر طلب الخدمة.",
+        brandName: "البازلت الرمادي",
+        navHome: "الرئيسية",
+        navServices: "خدماتنا",
+        serviceHomePage: "الصفحة الرئيسية",
+        serviceSmartHome: "الأنظمة الذكية",
+        serviceWoodworks: "الأعمال الخشبية",
+        serviceGypsum: "الجبس والتشطيبات الديكورية",
+        serviceTiles: "البلاط والسيراميك",
+        serviceElectrical: "الصيانة الكهربائية",
+        serviceLuxury: "تفاصيل التشطيب الفاخر",
+        navAbout: "من نحن",
+        navContact: "اتصل بنا",
+        heroEyebrow: "خدمة متخصصة",
+        heroTitle1: "أنظمة المنزل",
+        heroTitle2: "الذكي",
+        heroText: "نقدم حلول المنزل الذكي بطريقة عملية وأنيقة تجمع بين الراحة والأمان والتحكم السهل ضمن تجربة حديثة تناسب أسلوب الحياة المعاصر.",
+        btnOrder: "اطلب هذه الخدمة",
+        btnBack: "العودة إلى الخدمات",
+        aboutEyebrow: "شرح الخدمة",
+        aboutTitle: "ماذا تشمل هذه الخدمة؟",
+        aboutIntro: "هذه الصفحة تشرح الخدمة بشكل واضح حتى يفهم العميل ما الذي يتم تقديمه وما القيمة التي تضيفها الخدمة وكيف يتم التنفيذ.",
+        about1: "تحكم ذكي بالإضاءة والستائر والمشاهد اليومية.",
+        about2: "ربط الكاميرات والدخول والتنبيهات ضمن تجربة موحدة.",
+        about3: "إدارة مركزية عبر التطبيق والتحكم السهل.",
+        about4: "تهيئة قابلة للتوسع مستقبلًا.",
+        benefitsEyebrow: "فوائد الخدمة",
+        benefitsTitle: "لماذا تختار هذه الخدمة؟",
+        benefit1: "ترفع مستوى الراحة داخل المنزل أو المكتب.",
+        benefit2: "تساعد على تحسين كفاءة الطاقة.",
+        benefit3: "تضيف لمسة حديثة وفاخرة للعقار.",
+        benefit4: "تجعل التحكم اليومي أسرع وأسهل.",
+        galleryEyebrow: "صور الخدمة",
+        galleryTitle: "معرض صور توضيحي",
+        galleryIntro: "لمحة أقرب عن حلول التحكم الذكي والأمان والأتمتة التي نقدمها.",
+        gallery1: "لوحات تحكم ذكية متناسقة مع التصميم الداخلي.",
+        gallery2: "دمج سهل للإضاءة والستائر والمشاهد اليومية.",
+        gallery3: "حلول حديثة تضيف لمسة تقنية أنيقة.",
+        gallery4: "احصل على الحماية التي تستحقها مع كاميرات مراقبة عالية الجودة، توفر رؤية واضحة ليلاً ونهاراً.",
+        stepsEyebrow: "آلية العمل",
+        stepsTitle: "كيف يتم تنفيذ الخدمة؟",
+        step1Title: "دراسة الاحتياج",
+        step1Text: "نفهم نوع العقار وطريقة الاستخدام والاحتياجات الفعلية.",
+        step2Title: "اقتراح الحل",
+        step2Text: "نحدد الأجهزة المناسبة ونشرح طريقة الربط والتنفيذ.",
+        step3Title: "التركيب والتسليم",
+        step3Text: "يتم التركيب والبرمجة والاختبار ثم التسليم النهائي بسلاسة.",
+        ctaEyebrow: "جاهز للبدء؟",
+        ctaTitle: "اطلب الخدمة الآن",
+        ctaText: "استخدم هذا الزر لنقل العميل مباشرة إلى قسم التواصل في الصفحة الرئيسية.",
+        ctaBtn1: "اطلب هذه الخدمة",
+        ctaBtn2: "العودة إلى الخدمات",
+        footerText: "© 2026 البازلت الرمادي للخدمات الفنية. جميع الحقوق محفوظة.",
+        langBtn: "English",
+        lang: "ar",
+        dir: "rtl"
+      }
+    };
+
+    function setLanguage(language) {
+      const t = content[language];
+
+      document.documentElement.lang = t.lang;
+      document.documentElement.dir = t.dir;
+      document.title = t.pageTitle;
+      document.querySelector('meta[name="description"]').setAttribute("content", t.pageDesc);
+
+      const ids = [
+        "brandName","navHome","navServices","serviceHomePage","serviceSmartHome","serviceWoodworks","serviceGypsum","serviceTiles","serviceElectrical","serviceLuxury","navAbout","navContact",
+        "heroEyebrow","heroTitle1","heroTitle2","heroText","btnOrder","btnBack",
+        "aboutEyebrow","aboutTitle","aboutIntro","about1","about2","about3","about4",
+        "benefitsEyebrow","benefitsTitle","benefit1","benefit2","benefit3","benefit4",
+        "galleryEyebrow","galleryTitle","galleryIntro","gallery1","gallery2","gallery3","gallery4",
+        "stepsEyebrow","stepsTitle","step1Title","step1Text","step2Title","step2Text",
+        "step3Title","step3Text","ctaEyebrow","ctaTitle","ctaText","ctaBtn1","ctaBtn2",
+        "footerText"
+      ];
+
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = t[id];
+      });
+
+      document.getElementById("langToggle").textContent = t.langBtn;
+      localStorage.setItem("alb_lang", language);
+    }
+
+    const langToggle = document.getElementById("langToggle");
+
+    langToggle.addEventListener("click", function () {
+      const current = localStorage.getItem("alb_lang") || "en";
+      const next = current === "en" ? "ar" : "en";
+      setLanguage(next);
+    });
+
+
+    const servicesDropdown = document.getElementById("servicesDropdown");
+    const navServicesToggle = document.getElementById("navServicesToggle");
+
+    if (servicesDropdown && navServicesToggle) {
+      navServicesToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        servicesDropdown.classList.toggle("open");
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!servicesDropdown.contains(e.target)) {
+          servicesDropdown.classList.remove("open");
+        }
+      });
+    }
+
+    const gallery = document.getElementById("serviceGallery");
+    const galleryCards = document.querySelectorAll(".gallery-card");
+    const prevBtn = document.querySelector(".gallery-arrow.prev");
+    const nextBtn = document.querySelector(".gallery-arrow.next");
+    let autoSlideInterval;
+
+    function cardScrollAmount() {
+      const firstCard = gallery?.querySelector(".gallery-card");
+      const gap = parseFloat(getComputedStyle(gallery).gap || "18");
+      if (!firstCard) return 320;
+      return firstCard.getBoundingClientRect().width + gap;
+    }
+
+    function showCardsOnView() {
+      if (!("IntersectionObserver" in window)) {
+        galleryCards.forEach(card => card.classList.add("show"));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      }, { threshold: 0.18 });
+
+      galleryCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.08}s`;
+        observer.observe(card);
+      });
+    }
+
+    function stopAutoSlide() {
+      if (autoSlideInterval) clearInterval(autoSlideInterval);
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      if (!gallery || window.innerWidth >= 900) return;
+
+      autoSlideInterval = setInterval(() => {
+        const maxScroll = gallery.scrollWidth - gallery.clientWidth - 4;
+        const amount = cardScrollAmount();
+
+        if (gallery.scrollLeft >= maxScroll) {
+          gallery.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          gallery.scrollBy({ left: amount, behavior: "smooth" });
+        }
+      }, 3200);
+    }
+
+    if (gallery && prevBtn && nextBtn) {
+      prevBtn.addEventListener("click", () => {
+        gallery.scrollBy({ left: -cardScrollAmount(), behavior: "smooth" });
+        startAutoSlide();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        gallery.scrollBy({ left: cardScrollAmount(), behavior: "smooth" });
+        startAutoSlide();
+      });
+
+      gallery.addEventListener("touchstart", stopAutoSlide, { passive: true });
+      gallery.addEventListener("touchend", startAutoSlide, { passive: true });
+      gallery.addEventListener("mouseenter", stopAutoSlide);
+      gallery.addEventListener("mouseleave", startAutoSlide);
+      window.addEventListener("resize", startAutoSlide);
+    }
+
+    showCardsOnView();
+
+
+    const pageMenuToggle = document.getElementById("menuToggle");
+    const pageNavLinks = document.getElementById("navLinks");
+    const pageServicesDropdown = document.getElementById("servicesDropdown");
+
+    if (pageMenuToggle && pageNavLinks) {
+      pageMenuToggle.addEventListener("click", function () {
+        pageNavLinks.classList.toggle("open");
+        if (!pageNavLinks.classList.contains("open") && pageServicesDropdown) {
+          pageServicesDropdown.classList.remove("open");
+        }
+      });
+
+      document.querySelectorAll("#navLinks a").forEach(link => {
+        link.addEventListener("click", function () {
+          pageNavLinks.classList.remove("open");
+          if (pageServicesDropdown) {
+            pageServicesDropdown.classList.remove("open");
+          }
+        });
+      });
+    }
+
+    const savedLang = localStorage.getItem("alb_lang") || "en";
+    setLanguage(savedLang);
+    startAutoSlide();
+  </script>
+</body>
+</html>

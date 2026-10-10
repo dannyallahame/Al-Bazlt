@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electrical Maintenance | Al Bazlt Al Ramady</title>
+  <meta name="description" content="Electrical maintenance service page with a distinct premium layout, bilingual support, logo header, top hero video, and linked services dropdown." />
+  <link rel="canonical" href="https://bazeltgroup.ae/electrical-maintenance.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bazeltgroup.ae/electrical-maintenance.html">
+  <meta property="og:title" content="Electrical Maintenance | Al Bazlt Al Ramady">
+  <meta property="og:description" content="Electrical maintenance service page with a distinct premium layout, bilingual support, logo header, top hero video, and linked services dropdown." />
+  <meta name="robots" content="index,follow" />
+
+  <style>
+    :root{
+      --bg:#080808;
+      --text:#f5f0e6;
+      --muted:rgba(245,240,230,.72);
+      --gold:#d4af37;
+      --gold-soft:#f1dd9a;
+      --line:rgba(255,255,255,.08);
+      --line-gold:rgba(212,175,55,.22);
+      --shadow:0 20px 50px rgba(0,0,0,.35);
+      --radius-xl:30px;
+      --radius-lg:22px;
+      --container:1240px;
+      --transition:240ms ease;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Tahoma,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,.10), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,.04), transparent 18%),
+        linear-gradient(180deg,#070707 0%,#0c0c0c 54%,#080808 100%);
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size:44px 44px;
+      mask-image:linear-gradient(to bottom, rgba(0,0,0,.55), transparent 90%);
+      opacity:.24;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img,video{max-width:100%;display:block}
+    button,input,textarea,select{font:inherit}
+
+    .container{
+      width:min(var(--container), calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(9,9,9,.84);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 0;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:var(--gold-soft);
+      font-weight:700;
+      min-width:0;
+    }
+
+    .brand-logo{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      object-fit:contain;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      padding:8px;
+      flex-shrink:0;
+    }
+
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.08;
+    }
+
+    .brand-text small{
+      color:var(--muted);
+      font-size:.72rem;
+      font-weight:400;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a,
+    .lang-btn{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:var(--text);
+      transition:var(--transition);
+      cursor:pointer;
+    }
+
+    .nav-links a:hover,
+    .lang-btn:hover{
+      border-color:var(--line-gold);
+      color:var(--gold-soft);
+      background:rgba(212,175,55,.08);
+    }
+
+    .lang-btn{
+      background:linear-gradient(135deg,#e6c55b,#b88915);
+      color:#111;
+      border:none;
+      font-weight:700;
+    }
+
+    .nav-dropdown{
+      position:relative;
+    }
+
+    .nav-dropdown-trigger{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:var(--text);
+      transition:var(--transition);
+      cursor:pointer;
+    }
+
+    .nav-dropdown-trigger:hover{
+      border-color:var(--line-gold);
+      color:var(--gold-soft);
+      background:rgba(212,175,55,.08);
+    }
+
+    .nav-dropdown-arrow{
+      font-size:.8rem;
+      transition:transform var(--transition);
+    }
+
+    .nav-dropdown.open .nav-dropdown-arrow{
+      transform:rotate(180deg);
+    }
+
+    .nav-dropdown-menu{
+      position:absolute;
+      top:calc(100% + 10px);
+      left:0;
+      min-width:300px;
+      display:none;
+      flex-direction:column;
+      gap:6px;
+      padding:10px;
+      border-radius:20px;
+      background:rgba(10,10,10,.96);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+      z-index:50;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu{
+      display:flex;
+    }
+
+    .nav-dropdown-menu a{
+      display:block;
+      padding:12px 14px;
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid transparent;
+      color:var(--text);
+      transition:var(--transition);
+    }
+
+    .nav-dropdown-menu a:hover{
+      color:var(--gold-soft);
+      background:rgba(212,175,55,.08);
+      border-color:rgba(212,175,55,.2);
+    }
+
+    html[dir="rtl"] .nav-dropdown-menu{
+      left:auto;
+      right:0;
+    }
+
+    .hero{
+      padding:34px 0 26px;
+    }
+
+.hero-video-wrap{
+  position:relative;
+  height:420px;
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  background:#000;
+}
+
+.hero-video-wrap video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  display:block;
+}
+
+@media (max-width: 900px){
+  .hero-video-wrap{
+    height:260px;
+  }
+}
+    .hero-video-wrap::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.45)),
+        linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.08) 55%, rgba(0,0,0,.35));
+      pointer-events:none;
+    }
+
+    .hero-overlay{
+      position:absolute;
+      inset:auto 28px 28px 28px;
+      z-index:2;
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+      gap:18px;
+      align-items:end;
+    }
+
+    .hero-copy,
+    .hero-panel{
+      min-width:0;
+      border-radius:26px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(8,8,8,.58);
+      backdrop-filter:blur(10px);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-copy{
+      padding:28px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:14px;
+      color:var(--gold-soft);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.82rem;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:42px;
+      height:1px;
+      background:linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .hero-title{
+      font-size:clamp(2.4rem,5vw,5rem);
+      line-height:.98;
+      margin:0 0 16px;
+      letter-spacing:-.03em;
+    }
+
+    .hero-title .gold{
+      display:block;
+      color:var(--gold);
+    }
+
+    .hero-text{
+      color:rgba(245,240,230,.82);
+      line-height:1.9;
+      font-size:1.04rem;
+      margin:0 0 22px;
+      max-width:680px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:700;
+      transition:var(--transition);
+    }
+
+    .btn:hover{ transform:translateY(-2px); }
+
+    .btn-primary{
+      background:linear-gradient(135deg,#e6c55b,#b88915);
+      color:#111;
+      box-shadow:0 14px 34px rgba(212,175,55,.18);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      color:var(--text);
+    }
+
+    .hero-panel{
+      padding:22px;
+    }
+
+    .hero-panel-title{
+      margin:0 0 14px;
+      font-size:1.12rem;
+      color:var(--gold-soft);
+    }
+
+    .hero-panel-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+
+    .panel-item{
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    .panel-item strong{
+      display:block;
+      margin-bottom:5px;
+      color:var(--gold-soft);
+      font-size:.98rem;
+    }
+
+    .panel-item span{
+      color:var(--muted);
+      font-size:.92rem;
+      line-height:1.7;
+    }
+
+    .section{
+      padding:84px 0;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:28px;
+      flex-wrap:wrap;
+    }
+
+    .section-title{
+      font-size:clamp(1.9rem,3vw,3rem);
+      line-height:1.12;
+      margin:0 0 10px;
+    }
+
+    .section-intro{
+      margin:0;
+      max-width:760px;
+      color:var(--muted);
+      line-height:1.9;
+    }
+
+    .tag-badge{
+      padding:12px 16px;
+      border-radius:999px;
+      border:1px solid var(--line-gold);
+      background:rgba(212,175,55,.06);
+      color:var(--gold-soft);
+      white-space:nowrap;
+      font-size:.92rem;
+    }
+
+    .overview-grid{
+      display:grid;
+      grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .panel-card{
+      padding:32px;
+      border-radius:var(--radius-xl);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .feature-list{
+      display:grid;
+      gap:14px;
+      margin-top:20px;
+    }
+
+    .feature-item{
+      padding:16px 18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.07);
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .feature-item strong{
+      color:var(--gold-soft);
+    }
+
+    .value-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .value-card{
+      padding:18px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.07);
+      background:rgba(255,255,255,.03);
+    }
+
+    .value-card strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--gold-soft);
+    }
+
+    .value-card span{
+      color:var(--muted);
+      line-height:1.7;
+      font-size:.94rem;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr .9fr;
+      gap:18px;
+    }
+
+    .gallery-card{
+      min-height:260px;
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:rgba(255,255,255,.03);
+      position:relative;
+    }
+
+    .gallery-card.tall{
+      grid-row:1 / span 2;
+      min-height:540px;
+    }
+
+    .gallery-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .8s ease;
+    }
+
+    .gallery-card:hover img{
+      transform:scale(1.06);
+    }
+
+    .gallery-label{
+      position:absolute;
+      inset:auto 16px 16px 16px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(8,8,8,.72);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(8px);
+      line-height:1.65;
+      font-size:.92rem;
+    }
+
+    .process-layout{
+      display:grid;
+      grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);
+      gap:24px;
+      align-items:start;
+    }
+
+    .process-side{
+      position:sticky;
+      top:104px;
+      padding:32px;
+      border-radius:var(--radius-xl);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .steps{
+      display:grid;
+      gap:18px;
+    }
+
+    .step{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:16px;
+      padding:20px;
+      border-radius:24px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow);
+    }
+
+    .step-num{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(212,175,55,.14);
+      border:1px solid rgba(212,175,55,.18);
+      color:var(--gold-soft);
+      font-weight:700;
+      flex-shrink:0;
+    }
+
+    .step h3{
+      margin:0 0 8px;
+      font-size:1.08rem;
+    }
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .cta-band{
+      padding:38px;
+      border-radius:var(--radius-xl);
+      text-align:center;
+      background:
+        radial-gradient(circle at top center, rgba(212,175,55,.12), transparent 40%),
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .cta-band p{
+      max-width:760px;
+      margin:0 auto 22px;
+      color:var(--muted);
+      line-height:1.9;
+    }
+
+    footer{
+      padding:30px 0 50px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    @media (max-width: 1100px){
+      .hero-overlay,
+      .overview-grid,
+      .process-layout{
+        grid-template-columns:1fr;
+      }
+
+      .process-side{
+        position:static;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .gallery-card.tall{
+        grid-row:auto;
+        min-height:340px;
+      }
+    }
+
+    @media (max-width: 900px){
+      .nav{
+        justify-content:center;
+      }
+
+      .brand{
+        width:100%;
+        justify-content:center;
+      }
+
+      .nav-links{
+        width:100%;
+        justify-content:center;
+      }
+
+      .nav-dropdown{
+        width:100%;
+      }
+
+      .nav-dropdown-trigger{
+        width:100%;
+        justify-content:center;
+      }
+
+      .nav-dropdown-menu{
+        position:static;
+        min-width:100%;
+        margin-top:8px;
+      }
+
+      .hero{
+        padding:22px 0 18px;
+      }
+
+      .hero-video-wrap{
+        min-height:0;
+        height:auto;
+        overflow:visible;
+        background:transparent;
+        box-shadow:none;
+        border:none;
+      }
+
+      .hero-video-wrap::after{
+        display:none;
+      }
+
+      .hero-video-wrap video{
+        height:auto;
+        aspect-ratio:16/9;
+        border-radius:var(--radius-xl);
+        border:1px solid var(--line);
+        box-shadow:var(--shadow);
+      }
+
+      .hero-overlay{
+        position:static;
+        inset:auto;
+        margin:14px 0 0;
+        display:grid;
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+
+      .hero-copy,
+      .hero-panel,
+      .panel-card,
+      .process-side,
+      .cta-band{
+        padding:22px;
+        border-radius:24px;
+      }
+
+      .hero-title{
+        font-size:2.2rem;
+      }
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .value-grid,
+      .gallery-grid{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-card,
+      .gallery-card.tall{
+        min-height:240px;
+      }
+
+      .step{
+        grid-template-columns:1fr;
+        gap:12px;
+        padding:16px;
+        border-radius:20px;
+      }
+
+      .step-num{
+        width:42px;
+        height:42px;
+      }
+
+      .section{
+        padding:46px 0;
+      }
+    }
+  
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .menu-toggle{
+      display:none;
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);
+      color:var(--gold-soft);
+      font-size:1rem;
+      cursor:pointer;
+    }
+
+    @media (max-width:820px){
+      .menu-toggle{
+        display:inline-grid;
+        place-items:center;
+      }
+
+      .nav{
+        flex-wrap:wrap;
+      }
+
+      .nav-links{
+        width:100%;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:flex-start;
+        padding:16px;
+        background:rgba(255,255,255,.03);
+        border:1px solid rgba(255,255,255,.08);
+        border-radius:18px;
+        margin-top:8px;
+      }
+
+      .nav-links.open{
+        display:flex;
+      }
+
+      .nav-dropdown{
+        width:100%;
+      }
+
+      .nav-dropdown-trigger{
+        width:100%;
+        justify-content:space-between;
+      }
+
+      .nav-dropdown-menu{
+        position:static;
+        left:auto;
+        right:auto;
+        min-width:100%;
+        margin-top:10px;
+        border-radius:16px;
+        box-shadow:none;
+        background:rgba(0,0,0,.18);
+      }
+
+      .nav-actions{
+        margin-inline-start:auto;
+      }
+    }
+
+    @media (max-width:560px){
+      .nav-actions{
+        width:auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="AL BAZLT AL RAMADY">
+      <img class="brand-logo" src="images/logo.png" alt="AL BAZLT AL RAMADY Logo" />
+      <div class="brand-text">
+        <span id="brandName">AL BAZLT AL RAMADY</span>
+        <small id="brandSub">Technical Services</small>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" id="navHome">Home</a>
+
+      <div class="nav-dropdown" id="servicesDropdown">
+        <button class="nav-dropdown-trigger" id="navServicesToggle" type="button">
+          <span id="navServices">Our Services</span>
+          <span class="nav-dropdown-arrow">▾</span>
+        </button>
+
+        <div class="nav-dropdown-menu">
+          <a href="smart-home-systems.html" id="serviceSmartHome">Smart Home Systems</a>
+          <a href="custom-woodworks.html" id="serviceWoodworks">Custom Woodworks</a>
+          <a href="gypsum-decorative-finishes.html" id="serviceGypsum">Gypsum & Decorative Finishes</a>
+          <a href="tiles-ceramic-installation.html" id="serviceTiles">Tiles & Ceramic Installation</a>
+          <a href="electrical-maintenance.html" id="serviceElectrical">Electrical Maintenance</a>
+          <a href="luxury-finishing-details.html" id="serviceLuxury">Luxury Finishing Details</a>
+        </div>
+      </div>
+
+      <a href="index.html#about" id="navAbout">About</a>
+      <a href="index.html#contact" id="navContact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle">العربية</button>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-video-wrap">
+          <video autoplay muted loop playsinline poster="images/electrical-1.jpg">
+            <source src="videos/electrical-main.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+            <script>
+            (function(){
+              var v = document.querySelector('video');
+              if(!v) return;
+              function run(){
+                v.muted = true; v.defaultMuted = true; v.setAttribute('muted','');
+                v.playsInline = true;
+                try { var p = v.play(); if(p && p.catch) p.catch(function(){}); } catch(e){}
+              }
+              run();
+              if(v.readyState < 3) v.addEventListener('canplay', run);
+              ['pointerdown','touchstart'].forEach(function(ev){
+                document.addEventListener(ev, function(){ run(); }, { once:true, passive:true });
+              });
+            })();
+            </script>
+
+          <div class="hero-overlay">
+            <div class="hero-copy">
+              <div class="eyebrow" id="heroEyebrow">Power & Safety First</div>
+              <h1 class="hero-title">
+                <span id="heroTitle1">Electrical</span>
+                <span class="gold" id="heroTitle2">Maintenance</span>
+              </h1>
+              <p class="hero-text" id="heroText">
+                We provide reliable electrical maintenance solutions that protect performance,
+                improve safety, and keep systems working smoothly across homes, offices,
+                commercial spaces, and technical installations.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="index.html#contact" id="btnOrder">Request This Service</a>
+                <a class="btn btn-secondary" href="index.html#services" id="btnBack">Back to Services</a>
+              </div>
+            </div>
+
+            <div class="hero-panel">
+              <h3 class="hero-panel-title" id="panelTitle">Service Focus</h3>
+              <div class="hero-panel-grid">
+                <div class="panel-item">
+                  <strong id="panel1Title">Fast Response</strong>
+                  <span id="panel1Text">Quick support for faults, maintenance needs, and electrical corrections.</span>
+                </div>
+                <div class="panel-item">
+                  <strong id="panel2Title">Safe Systems</strong>
+                  <span id="panel2Text">Work handled with attention to protection, proper load handling, and safe execution.</span>
+                </div>
+                <div class="panel-item">
+                  <strong id="panel3Title">Clean Finish</strong>
+                  <span id="panel3Text">Technical work delivered with tidy detailing that suits premium interiors.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" id="overviewEyebrow">Service Overview</div>
+            <h2 class="section-title" id="overviewTitle">Technical reliability that supports the whole project</h2>
+            <p class="section-intro" id="overviewIntro">
+              Electrical maintenance is not only about fixing faults, but also about keeping systems stable,
+              safe, efficient, and visually neat in finished spaces.
+            </p>
+          </div>
+          <div class="tag-badge" id="overviewBadge">Safety • Corrections • Maintenance • Upgrades</div>
+        </div>
+
+        <div class="overview-grid">
+          <div class="panel-card">
+            <div class="eyebrow" id="includeEyebrow">What we include</div>
+            <h3 class="section-title" id="includeTitle" style="font-size:1.8rem;">What does the service cover?</h3>
+
+            <div class="feature-list">
+              <div class="feature-item" id="include1"><strong>1.</strong> Troubleshooting, fault detection, and correction of common electrical issues.</div>
+              <div class="feature-item" id="include2"><strong>2.</strong> Maintenance of switches, sockets, lighting points, panels, and visible accessories.</div>
+              <div class="feature-item" id="include3"><strong>3.</strong> Upgrades, replacements, and adjustments for better reliability and safe daily use.</div>
+              <div class="feature-item" id="include4"><strong>4.</strong> Support for residential, office, and commercial environments with clean finishing.</div>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="eyebrow" id="valueEyebrow">Execution Value</div>
+            <h3 class="section-title" id="valueTitle" style="font-size:1.8rem;">Why this stage matters so much</h3>
+
+            <div class="value-grid">
+              <div class="value-card">
+                <strong id="value1Title">Safe Operation</strong>
+                <span id="value1Text">Stable electrical systems reduce risk and improve confidence in daily use.</span>
+              </div>
+              <div class="value-card">
+                <strong id="value2Title">Reliable Performance</strong>
+                <span id="value2Text">Preventive maintenance and good corrections help avoid repeated issues.</span>
+              </div>
+              <div class="value-card">
+                <strong id="value3Title">Neat Appearance</strong>
+                <span id="value3Text">Visible points, plates, and fixtures should look as clean as they function.</span>
+              </div>
+              <div class="value-card">
+                <strong id="value4Title">Practical Upgrades</strong>
+                <span id="value4Text">Smart replacements and improvements make systems more useful and future-ready.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" id="galleryEyebrow">Project Gallery</div>
+            <h2 class="section-title" id="galleryTitle">Video first, then supporting visuals</h2>
+            <p class="section-intro" id="galleryIntro">
+              This page starts with a hero video, then uses still images to highlight installations,
+              panels, lighting points, wiring corrections, and premium finishing details.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-card tall">
+            <img src="images/electrical-1.jpg" alt="Electrical showcase 1" />
+            <div class="gallery-label" id="gallery1">Clean electrical points and finishes that suit refined interiors.</div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="images/electrical-2.jpg" alt="Electrical showcase 2" />
+            <div class="gallery-label" id="gallery2">Lighting adjustments and maintenance handled with technical care.</div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="images/electrical-3.jpg" alt="Electrical showcase 3" />
+            <div class="gallery-label" id="gallery3">Panels, accessories, and visible elements installed with order and precision.</div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="images/electrical-4.jpg" alt="Electrical showcase 4" />
+            <div class="gallery-label" id="gallery4">Reliable corrections that improve both safety and everyday performance.</div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="images/electrical-5.jpg" alt="Electrical showcase 5" />
+            <div class="gallery-label" id="gallery5">Technical work delivered with a clean final impression.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container process-layout">
+        <div class="process-side">
+          <div class="eyebrow" id="processEyebrow">Execution Flow</div>
+          <h2 class="section-title" id="processTitle">From diagnosis to final correction</h2>
+          <p class="section-intro" id="processIntro">
+            Good maintenance starts with clear diagnosis, then safe correction,
+            testing, and a neat final result that fits the completed project.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3 id="step1Title">Inspection & Fault Review</h3>
+              <p id="step1Text">We inspect the issue, review the affected points, and identify the correct maintenance approach.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3 id="step2Title">Repair & Adjustment</h3>
+              <p id="step2Text">Connections, accessories, lighting points, or damaged components are corrected safely and accurately.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3 id="step3Title">Testing & Final Handover</h3>
+              <p id="step3Text">We test operation, confirm reliability, and leave the work in a clean and ready condition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <div class="eyebrow" id="ctaEyebrow">Ready to start?</div>
+          <h2 class="section-title" id="ctaTitle">Let us keep your systems safe, stable, and ready</h2>
+          <p id="ctaText">
+            This page keeps the same visual identity, logo presence, and linked services dropdown,
+            while giving electrical maintenance a different presentation with a video-first interface.
+          </p>
+
+          <div class="hero-actions" style="justify-content:center; margin-bottom:0;">
+            <a class="btn btn-primary" href="index.html#contact" id="ctaBtn1">Request This Service</a>
+            <a class="btn btn-secondary" href="index.html#services" id="ctaBtn2">Back to Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footerText">
+    © 2026 Al Bazlt Al Ramady Technical Services. All rights reserved.
+  </footer>
+
+  <script>
+    const content = {
+      en: {
+        pageTitle: "Electrical Maintenance | Al Bazlt Al Ramady",
+        pageDesc: "Electrical maintenance service page with a distinct premium layout, bilingual support, logo header, top hero video, and linked services dropdown.",
+        brandName: "AL BAZLT AL RAMADY",
+        brandSub: "Technical Services",
+        navHome: "Home",
+        navServices: "Our Services",
+        navAbout: "About",
+        navContact: "Contact",
+        serviceAll: "All Services",
+        serviceSmartHome: "Smart Home Systems",
+        serviceWoodworks: "Custom Woodworks",
+        serviceGypsum: "Gypsum & Decorative Finishes",
+        serviceTiles: "Tiles & Ceramic Installation",
+        serviceElectrical: "Electrical Maintenance",
+        serviceLuxury: "Luxury Finishing Details",
+        heroEyebrow: "Power & Safety First",
+        heroTitle1: "Electrical",
+        heroTitle2: "Maintenance",
+        heroText: "We provide reliable electrical maintenance solutions that protect performance, improve safety, and keep systems working smoothly across homes, offices, commercial spaces, and technical installations.",
+        btnOrder: "Request This Service",
+        btnBack: "Back to Services",
+        panelTitle: "Service Focus",
+        panel1Title: "Fast Response",
+        panel1Text: "Quick support for faults, maintenance needs, and electrical corrections.",
+        panel2Title: "Safe Systems",
+        panel2Text: "Work handled with attention to protection, proper load handling, and safe execution.",
+        panel3Title: "Clean Finish",
+        panel3Text: "Technical work delivered with tidy detailing that suits premium interiors.",
+        overviewEyebrow: "Service Overview",
+        overviewTitle: "Technical reliability that supports the whole project",
+        overviewIntro: "Electrical maintenance is not only about fixing faults, but also about keeping systems stable, safe, efficient, and visually neat in finished spaces.",
+        overviewBadge: "Safety • Corrections • Maintenance • Upgrades",
+        includeEyebrow: "What we include",
+        includeTitle: "What does the service cover?",
+        include1: "<strong>1.</strong> Troubleshooting, fault detection, and correction of common electrical issues.",
+        include2: "<strong>2.</strong> Maintenance of switches, sockets, lighting points, panels, and visible accessories.",
+        include3: "<strong>3.</strong> Upgrades, replacements, and adjustments for better reliability and safe daily use.",
+        include4: "<strong>4.</strong> Support for residential, office, and commercial environments with clean finishing.",
+        valueEyebrow: "Execution Value",
+        valueTitle: "Why this stage matters so much",
+        value1Title: "Safe Operation",
+        value1Text: "Stable electrical systems reduce risk and improve confidence in daily use.",
+        value2Title: "Reliable Performance",
+        value2Text: "Preventive maintenance and good corrections help avoid repeated issues.",
+        value3Title: "Neat Appearance",
+        value3Text: "Visible points, plates, and fixtures should look as clean as they function.",
+        value4Title: "Practical Upgrades",
+        value4Text: "Smart replacements and improvements make systems more useful and future-ready.",
+        galleryEyebrow: "Project Gallery",
+        galleryTitle: "Video first, then supporting visuals",
+        galleryIntro: "This page starts with a hero video, then uses still images to highlight installations, panels, lighting points, wiring corrections, and premium finishing details.",
+        gallery1: "Clean electrical points and finishes that suit refined interiors.",
+        gallery2: "Lighting adjustments and maintenance handled with technical care.",
+        gallery3: "Panels, accessories, and visible elements installed with order and precision.",
+        gallery4: "Reliable corrections that improve both safety and everyday performance.",
+        gallery5: "Technical work delivered with a clean final impression.",
+        processEyebrow: "Execution Flow",
+        processTitle: "From diagnosis to final correction",
+        processIntro: "Good maintenance starts with clear diagnosis, then safe correction, testing, and a neat final result that fits the completed project.",
+        step1Title: "Inspection & Fault Review",
+        step1Text: "We inspect the issue, review the affected points, and identify the correct maintenance approach.",
+        step2Title: "Repair & Adjustment",
+        step2Text: "Connections, accessories, lighting points, or damaged components are corrected safely and accurately.",
+        step3Title: "Testing & Final Handover",
+        step3Text: "We test operation, confirm reliability, and leave the work in a clean and ready condition.",
+        ctaEyebrow: "Ready to start?",
+        ctaTitle: "Let us keep your systems safe, stable, and ready",
+        ctaText: "This page keeps the same visual identity, logo presence, and linked services dropdown, while giving electrical maintenance a different presentation with a video-first interface.",
+        ctaBtn1: "Request This Service",
+        ctaBtn2: "Back to Services",
+        footerText: "© 2026 Al Bazlt Al Ramady Technical Services. All rights reserved.",
+        langBtn: "العربية",
+        lang: "en",
+        dir: "ltr"
+      },
+
+      ar: {
+        pageTitle: "الصيانة الكهربائية | البازلت الرمادي",
+        pageDesc: "صفحة خدمة الصيانة الكهربائية بتصميم مختلف، مع دعم عربي وإنجليزي، واللوغو في الهيدر، وفيديو في البداية، وقائمة خدمات مرتبطة بباقي الصفحات.",
+        brandName: "البازلت الرمادي",
+        brandSub: "الخدمات الفنية",
+        navHome: "الرئيسية",
+        navServices: "خدماتنا",
+        navAbout: "من نحن",
+        navContact: "اتصل بنا",
+        serviceAll: "كل الخدمات",
+        serviceSmartHome: "الأنظمة الذكية",
+        serviceWoodworks: "الأعمال الخشبية",
+        serviceGypsum: "الجبس والتشطيبات الديكورية",
+        serviceTiles: "التركيب والسيراميك",
+        serviceElectrical: "الصيانة الكهربائية",
+        serviceLuxury: "تفاصيل التشطيب الفاخر",
+        heroEyebrow: "الطاقة والسلامة أولاً",
+        heroTitle1: "الصيانة",
+        heroTitle2: "الكهربائية",
+        heroText: "نقدم حلول صيانة كهربائية موثوقة تحافظ على الأداء، وتعزز السلامة، وتبقي الأنظمة تعمل بسلاسة في المنازل والمكاتب والمساحات التجارية والتركيبات الفنية.",
+        btnOrder: "اطلب هذه الخدمة",
+        btnBack: "العودة إلى الخدمات",
+        panelTitle: "محور الخدمة",
+        panel1Title: "استجابة سريعة",
+        panel1Text: "دعم سريع للأعطال واحتياجات الصيانة والتصحيحات الكهربائية.",
+        panel2Title: "أنظمة آمنة",
+        panel2Text: "العمل يتم باهتمام بالحماية وتحمل الأحمال والتنفيذ الآمن.",
+        panel3Title: "تشطيب نظيف",
+        panel3Text: "تنفيذ تقني مرتب ينسجم مع المساحات الداخلية الراقية.",
+        overviewEyebrow: "نظرة عامة",
+        overviewTitle: "اعتمادية تقنية تدعم المشروع بالكامل",
+        overviewIntro: "الصيانة الكهربائية لا تعني فقط إصلاح الأعطال، بل تعني أيضًا الحفاظ على استقرار الأنظمة وسلامتها وكفاءتها ومظهرها المرتب داخل المساحات المنجزة.",
+        overviewBadge: "سلامة • تصحيحات • صيانة • تطوير",
+        includeEyebrow: "ما الذي نقدمه",
+        includeTitle: "ماذا تشمل الخدمة؟",
+        include1: "<strong>1.</strong> كشف الأعطال وتشخيصها وتصحيح المشكلات الكهربائية الشائعة.",
+        include2: "<strong>2.</strong> صيانة المفاتيح والمخارج ونقاط الإنارة واللوحات والملحقات الظاهرة.",
+        include3: "<strong>3.</strong> تطويرات واستبدالات وتعديلات لتحسين الاعتمادية والاستخدام اليومي الآمن.",
+        include4: "<strong>4.</strong> دعم للمنازل والمكاتب والمساحات التجارية مع تشطيب نظيف.",
+        valueEyebrow: "قيمة التنفيذ",
+        valueTitle: "لماذا هذه المرحلة مهمة جدًا",
+        value1Title: "تشغيل آمن",
+        value1Text: "استقرار الأنظمة الكهربائية يقلل المخاطر ويزيد الثقة في الاستخدام اليومي.",
+        value2Title: "أداء موثوق",
+        value2Text: "الصيانة الوقائية والتصحيحات الجيدة تساعد على تجنب تكرار الأعطال.",
+        value3Title: "مظهر مرتب",
+        value3Text: "النقاط الظاهرة والأغطية والملحقات يجب أن تبدو نظيفة بقدر كفاءتها.",
+        value4Title: "تطويرات عملية",
+        value4Text: "الاستبدالات والتحسينات الذكية تجعل الأنظمة أكثر فائدة واستعدادًا للمستقبل.",
+        galleryEyebrow: "معرض المشاريع",
+        galleryTitle: "فيديو أولاً ثم صور داعمة",
+        galleryIntro: "هذه الصفحة تبدأ بفيديو رئيسي، ثم تستخدم الصور لإبراز التركيبات واللوحات ونقاط الإنارة وتصحيحات التوصيل والتفاصيل النهائية الراقية.",
+        gallery1: "نقاط كهربائية نظيفة وتشطيبات تناسب المساحات الراقية.",
+        gallery2: "تعديلات الإنارة والصيانة منفذة بعناية تقنية.",
+        gallery3: "اللوحات والملحقات والعناصر الظاهرة مركبة بترتيب ودقة.",
+        gallery4: "تصحيحات موثوقة تحسن السلامة والأداء اليومي.",
+        gallery5: "أعمال تقنية تقدم بانطباع نهائي نظيف ومرتب.",
+        processEyebrow: "مراحل التنفيذ",
+        processTitle: "من التشخيص إلى التصحيح النهائي",
+        processIntro: "الصيانة الجيدة تبدأ بتشخيص واضح، ثم تصحيح آمن، ثم اختبار ونتيجة نهائية نظيفة تناسب المشروع المنجز.",
+        step1Title: "الفحص ومراجعة العطل",
+        step1Text: "نقوم بفحص المشكلة ومراجعة النقاط المتأثرة وتحديد طريقة الصيانة المناسبة.",
+        step2Title: "الإصلاح والتعديل",
+        step2Text: "يتم تصحيح التوصيلات أو الملحقات أو نقاط الإنارة أو الأجزاء المتضررة بشكل آمن ودقيق.",
+        step3Title: "الاختبار والتسليم النهائي",
+        step3Text: "نختبر التشغيل ونؤكد الاعتمادية ونترك العمل بحالة نظيفة وجاهزة.",
+        ctaEyebrow: "جاهز للبدء؟",
+        ctaTitle: "دعنا نحافظ على أنظمتك آمنة ومستقرة وجاهزة",
+        ctaText: "هذه الصفحة تحافظ على نفس الهوية البصرية وحضور اللوغو وقائمة الخدمات المرتبطة، لكنها تقدم الصيانة الكهربائية بأسلوب عرض مختلف يبدأ بالفيديو.",
+        ctaBtn1: "اطلب هذه الخدمة",
+        ctaBtn2: "العودة إلى الخدمات",
+        footerText: "© 2026 البازلت الرمادي للخدمات الفنية. جميع الحقوق محفوظة.",
+        langBtn: "English",
+        lang: "ar",
+        dir: "rtl"
+      }
+    };
+
+    function setLanguage(language) {
+      const t = content[language];
+      document.documentElement.lang = t.lang;
+      document.documentElement.dir = t.dir;
+      document.title = t.pageTitle;
+      document.querySelector('meta[name="description"]').setAttribute("content", t.pageDesc);
+
+      const ids = [
+        "brandName","brandSub","navHome","navServices","serviceSmartHome","serviceWoodworks","serviceGypsum","serviceTiles","serviceElectrical","serviceLuxury","navAbout","navContact",
+        "serviceSmartHome","serviceWoodworks","serviceGypsum","serviceTiles","serviceElectrical","serviceLuxury",
+        "heroEyebrow","heroTitle1","heroTitle2","heroText","btnOrder","btnBack",
+        "panelTitle","panel1Title","panel1Text","panel2Title","panel2Text","panel3Title","panel3Text",
+        "overviewEyebrow","overviewTitle","overviewIntro","overviewBadge",
+        "includeEyebrow","includeTitle","include1","include2","include3","include4",
+        "valueEyebrow","valueTitle","value1Title","value1Text","value2Title","value2Text","value3Title","value3Text","value4Title","value4Text",
+        "galleryEyebrow","galleryTitle","galleryIntro","gallery1","gallery2","gallery3","gallery4","gallery5",
+        "processEyebrow","processTitle","processIntro","step1Title","step1Text","step2Title","step2Text","step3Title","step3Text",
+        "ctaEyebrow","ctaTitle","ctaText","ctaBtn1","ctaBtn2","footerText"
+      ];
+
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (typeof t[id] !== "undefined") el.innerHTML = t[id];
+      });
+
+      document.getElementById("langToggle").textContent = t.langBtn;
+      localStorage.setItem("alb_lang", language);
+    }
+
+    const servicesDropdown = document.getElementById("servicesDropdown");
+    const navServicesToggle = document.getElementById("navServicesToggle");
+
+    if (servicesDropdown && navServicesToggle) {
+      navServicesToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        servicesDropdown.classList.toggle("open");
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!servicesDropdown.contains(e.target)) {
+          servicesDropdown.classList.remove("open");
+        }
+      });
+    }
+
+    const langToggle = document.getElementById("langToggle");
+    langToggle.addEventListener("click", function(){
+      const current = localStorage.getItem("alb_lang") || "en";
+      setLanguage(current === "en" ? "ar" : "en");
+    });
+
+
+    const pageMenuToggle = document.getElementById("menuToggle");
+    const pageNavLinks = document.getElementById("navLinks");
+    const pageServicesDropdown = document.getElementById("servicesDropdown");
+
+    if (pageMenuToggle && pageNavLinks) {
+      pageMenuToggle.addEventListener("click", function () {
+        pageNavLinks.classList.toggle("open");
+        if (!pageNavLinks.classList.contains("open") && pageServicesDropdown) {
+          pageServicesDropdown.classList.remove("open");
+        }
+      });
+
+      document.querySelectorAll("#navLinks a").forEach(link => {
+        link.addEventListener("click", function () {
+          pageNavLinks.classList.remove("open");
+          if (pageServicesDropdown) {
+            pageServicesDropdown.classList.remove("open");
+          }
+        });
+      });
+    }
+
+    const savedLang = localStorage.getItem("alb_lang") || "en";
+    setLanguage(savedLang);
+  </script>
+</body>
+</html>
